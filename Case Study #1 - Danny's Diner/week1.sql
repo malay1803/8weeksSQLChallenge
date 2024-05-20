@@ -152,12 +152,6 @@ on s.product_id = m.product_id
 group by s.customer_id
 order by s.customer_id
 
-
-select s.customer_id, count(s.product_id), sum(m.price) 
-from sales s join menu m 
-on s.product_id=m.product_id 
-group by s.customer_id
-
 -- 9.  If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 with points as (
 	select m.product_id, case when m.product_name = 'sushi' then 20*m.price
