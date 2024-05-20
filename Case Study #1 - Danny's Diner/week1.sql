@@ -1,6 +1,8 @@
+-- Create a schema in PgAdmin4 and select it.
 CREATE SCHEMA dannys_diner;
 SET search_path = dannys_diner;
 
+-- Create Sales table and insert values in it (All of this is available in the website) 
 CREATE TABLE sales (
   "customer_id" VARCHAR(1),
   "order_date" DATE,
@@ -26,7 +28,7 @@ VALUES
   ('C', '2021-01-01', '3'),
   ('C', '2021-01-07', '3');
  
-
+-- Create Menu table and insert values in it (All of this is available in the website) 
 CREATE TABLE menu (
   "product_id" INTEGER,
   "product_name" VARCHAR(5),
@@ -40,7 +42,7 @@ VALUES
   ('2', 'curry', '15'),
   ('3', 'ramen', '12');
   
-
+-- Create Members table and insert values in it (All of this is available in the website) 
 CREATE TABLE members (
   "customer_id" VARCHAR(1),
   "join_date" DATE
