@@ -1,6 +1,8 @@
+-- Create a schema in PgAdmin4 and select it.
 CREATE SCHEMA pizza_runner;
 SET search_path = pizza_runner;
 
+-- Create runners table and insert values in it (All of this is available in the website) 
 DROP TABLE IF EXISTS runners;
 CREATE TABLE runners (
   "runner_id" INTEGER,
@@ -14,7 +16,7 @@ VALUES
   (3, '2021-01-08'),
   (4, '2021-01-15');
 
-
+-- Create customer_orders table and insert values in it (All of this is available in the website) 
 DROP TABLE IF EXISTS customer_orders;
 CREATE TABLE customer_orders (
   "order_id" INTEGER,
@@ -43,7 +45,7 @@ VALUES
   ('10', '104', '1', 'null', 'null', '2020-01-11 18:34:49'),
   ('10', '104', '1', '2, 6', '1, 4', '2020-01-11 18:34:49');
 
-
+-- Create runner_orders table and insert values in it (All of this is available in the website) 
 DROP TABLE IF EXISTS runner_orders;
 CREATE TABLE runner_orders (
   "order_id" INTEGER,
@@ -68,19 +70,20 @@ VALUES
   ('9', '2', 'null', 'null', 'null', 'Customer Cancellation'),
   ('10', '1', '2020-01-11 18:50:20', '10km', '10minutes', 'null');
 
-
+--Create pizza_names table and insert values in it (All of this is available in the website) 
 DROP TABLE IF EXISTS pizza_names;
 CREATE TABLE pizza_names (
   "pizza_id" INTEGER,
   "pizza_name" TEXT
 );
+
 INSERT INTO pizza_names
   ("pizza_id", "pizza_name")
 VALUES
   (1, 'Meatlovers'),
   (2, 'Vegetarian');
 
-
+--Create pizza_recipes table and insert values in it (All of this is available in the website) 
 DROP TABLE IF EXISTS pizza_recipes;
 CREATE TABLE pizza_recipes (
   "pizza_id" INTEGER,
@@ -92,7 +95,7 @@ VALUES
   (1, '1, 2, 3, 4, 5, 6, 8, 10'),
   (2, '4, 6, 7, 9, 11, 12');
 
-
+--Create pizza_toppings table and insert values in it (All of this is available in the website) 
 DROP TABLE IF EXISTS pizza_toppings;
 CREATE TABLE pizza_toppings (
   "topping_id" INTEGER,
@@ -115,8 +118,6 @@ VALUES
   (12, 'Tomato Sauce');
   
   
-select * from runners
-
 --Data Cleaning for Customer Orders--
 select * from customer_orders
 
